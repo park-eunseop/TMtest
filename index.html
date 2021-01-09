@@ -123,8 +123,8 @@ body {
 		Hello, goorm!
 	</div>
 	<div>Teachable Machine Image Model</div>
-	<button type="button" onclick="init()">Start</button>
-	<button type="button" onclick="predict()">Predict</button>
+	<button type="button" onclick="init()">머신 작동하기(시작과 동시에 수정)</button>
+	<button type="button" onclick="predict()">분석하기</button>
 	<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<div class="file-upload">
 		<button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
@@ -195,7 +195,7 @@ body {
     async function predict() {
 			// predict can take in an image, video or canvas html element
 			var image = document.getElementById("face-image");
-			const prediction = await model.predict(image);
+			const prediction = await model.predict(image,false);
 			for (let i = 0; i < maxPredictions; i++) {
 				const classPrediction =
 					prediction[i].className + ": " + prediction[i].probability.toFixed(2);
