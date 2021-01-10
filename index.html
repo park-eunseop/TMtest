@@ -208,14 +208,20 @@ body {
 			*/
 			var name = prediction[0].className;
 			var predictvalue = prediction[0].probability.toFixed(2);
+			console.log(name);
+			console.log(predictvalue);
 
+			/*
 			for (let i = 1; i < maxPredictions; i++) {
 				if(predictvalue< prediction[i].probability.toFixed(2)){
 					name = prediction[i].className;
 				}
 
 			}
-			labelContainer.childNodes[0].innerHTML = name;
+			*/
+			const classPrediction =
+					prediction[1].className + ": " + prediction[1].probability.toFixed(2);
+			labelContainer.childNodes[0].innerHTML = classPrediction;
 
 
 		}
