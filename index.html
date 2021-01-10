@@ -201,6 +201,8 @@ body {
 			const prediction = await model.predict(image,false);
 			
 			for (let i = 0; i < maxPredictions; i++) {
+				//const name = prediction[i].className;
+				//const predictvalue = prediction[i].probability.toFixed(2);
 				const classPrediction =
 					prediction[i].className + ": " + prediction[i].probability.toFixed(2);
 				labelContainer.childNodes[i].innerHTML = classPrediction;
