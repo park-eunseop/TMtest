@@ -49,33 +49,6 @@
   </style>
 </head>
 <body>
-<script>
-     $(document).ready(function(){
-            var objDragAndDrop = $(".dragAndDropDiv");
-
-          
-            objDragAndDrop.on('click',function (e){
-                    $('input[type=file]').trigger('click');
-            });
-
-
-            $("#fileUpload").change(function(){
-		        if(this.files && this.files[0]) {
-			        var reader = new FileReader;
-			        reader.onload = function(data) {
-		 		    $(".dragAndDropDiv").attr("src", data.target.result).width(300).height(300);        
-			        }
-			        reader.readAsDataURL(this.files[0]);
-		  }
-	    });//첨부파일 사진
-     
-     
-    });
-
-
-
-
-</script>
     
     <nav class="navbar navbar-default">
         <div class="container">
@@ -179,6 +152,32 @@
 			document.getElementById("label-container").value=name;
 
 		}
+</script>
+<script>
+
+		   var objDragAndDrop = $(".dragAndDropDiv");
+
+		 
+		   objDragAndDrop.on('click',function (e){
+				   $('input[type=file]').trigger('click');
+		   });
+
+
+		   $("#fileUpload").change(function(){
+			   if(this.files && this.files[0]) {
+				   var reader = new FileReader;
+				   reader.onload = function(data) {
+					$(".dragAndDropDiv").attr("src", data.target.result).width(300).height(300);        
+				   }
+				   reader.readAsDataURL(this.files[0]);
+		 }
+	   });//첨부파일 사진
+	
+
+
+
+
+
 </script>
 
 
