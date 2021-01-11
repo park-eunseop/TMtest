@@ -202,7 +202,7 @@ body {
 			const prediction = await model.predict(image,false);
 
 			const name = prediction[0].className;
-			const value = prediction[0].probability.toFixed(2);
+			var value = prediction[0].probability.toFixed(2);
 			
 			/*
 			for (let i = 1; i < maxPredictions; i++) {
