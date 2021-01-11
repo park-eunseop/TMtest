@@ -135,10 +135,10 @@ body {
 	<input type="hidden" id ="filehidden"/>
     <div class="select_img"><img src="" id="face-image" /></div>
 
-
+	<div id="label-container" style="font-weight: bold;"></div>
 	<form method="post" action="http://localhost:8080/veve/Member/MemberDietpost.do">
 		
-	<div id="label-container" style="font-weight: bold;"></div>
+	
 
 	<!--
 	<input type="text" value="" id="label-container" name="menu"/>
@@ -184,7 +184,7 @@ body {
 					name = prediction[i].className;
 				}
 			}
-			document.getElementById("label-container").innerHTML(name);
+			document.getElementById("label-container").innerHTML=name;
 
 		}
 </script>
