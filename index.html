@@ -225,9 +225,9 @@ body {
 					name = prediction[i].className;
 				}
 			}
-			const classPrediction =
-						name + ": " + value;
-			labelContainer.childNodes[0].innerHTML = classPrediction;
+			const classPrediction =	name;
+			//labelContainer.childNodes[0].innerHTML = classPrediction;
+			$('#label-container').html = classPrediction;
 			
 			
 
