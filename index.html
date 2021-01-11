@@ -182,10 +182,10 @@ body {
         //document.getElementById("webcam-container").appendChild(webcam.canvas);
 
 
-        labelContainer = document.getElementById("label-container");
-        for (let i = 0; i < maxPredictions; i++) { // and class labels
-            labelContainer.appendChild(document.createElement("div"));
-        }
+        //labelContainer = document.getElementById("label-container");
+        //for (let i = 0; i < maxPredictions; i++) { // and class labels
+         //   labelContainer.appendChild(document.createElement("div"));
+        //}
     }
     /* 웹에서 사용하는 메소드
     async function loop() {
@@ -225,9 +225,9 @@ body {
 					name = prediction[i].className;
 				}
 			}
-			const classPrediction =	name;
-			//labelContainer.childNodes[0].innerHTML = classPrediction;
-			$('#label-container').html(classPrediction);
+			//const classPrediction =	name;
+			document.getElementById("label-container").innerHTML = name;
+			//$('#label-container').html(classPrediction);
 			
 			
 
