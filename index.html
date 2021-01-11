@@ -125,7 +125,19 @@ body {
 	<div>Teachable Machine Image Model</div>
 	<button type="button" onclick="init()" hidden="">머신 작동하기(시작과 동시에 수정)</button>
 	<button type="button" onclick="predict()">분석하기</button>
+
+
 	<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+	
+	<label for="usr">음식 사진</label>
+    <input id="inputfile" class="form-control-file" type="file" name="upload">
+	<input type="hidden" id ="filehidden"/>
+    <div class="select_img"><img src="" id="face-image" /></div>
+
+
+
+	<!--
 	<div class="file-upload">
 		<button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
 
@@ -144,6 +156,10 @@ body {
 			</div>
 		</div>
 	</div>
+	-->
+
+
+
 	<div id="label-container" style="font-weight: bold;"></div>
 	<a href="http://localhost:8080/veve/Member/MemberDiet.do?result=100">분석 값 보내기</a>
 
@@ -234,6 +250,19 @@ body {
 		}
 </script>
 <script>
+
+	$("#inputfile").change(function(){
+		if(this.files && this.files[0]) {
+			 var reader = new FileReader;
+			reader.onload = function(data) {
+		 		$(".select_img img").attr("src", data.target.result).width(300).height(300);        
+			}
+			reader.readAsDataURL(this.files[0]);
+		  }
+	});//첨부파일 사진
+
+
+	/*
     function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
@@ -259,7 +288,8 @@ body {
     });
     $('.image-upload-wrap').bind('dragleave', function() {
         $('.image-upload-wrap').removeClass('image-dropping');
-    });
+	});
+	*/
 </script>
 
 
