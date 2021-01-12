@@ -107,13 +107,24 @@
   <button type="button" onclick="predict()" style="color: black;">${id}분석하기</button>
   <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   </br>
-  <form method="post" action="http://localhost:8080/veve/Member/MemberDietpost.do">
 		
 	<input type="text" value="" id="label-container" name="menu" style="color: black;"/>
 
-	<input type="submit" value="분석 값 보내기 post" style="color: black;">
-  </form>
+	<input id="sendinfo" type="button" value="분석 값 보내기 ajax" style="color: black;">
+ 
 </div>
+<script>
+//  <form method="post" action="http://localhost:8080/veve/Member/MemberDietpost.do">
+
+$('#sendinfo').click(function(){
+    var data = $('#label.container').val();
+    alert(data);
+
+
+});
+
+</script>
+
 
 
 
