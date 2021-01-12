@@ -119,6 +119,17 @@
 $('#sendinfo').click(function(){
     var data = document.getElementById("label-container").value;
     alert(data);
+    $.ajax({
+				url: "http://localhost:8080/veve/Member/MemberDietpost.do",
+				data : "data="+data,
+				type : 'post',
+				dataType: 'json',
+				success : function(data) {
+					
+          alert('success!');
+					
+				}
+			});
 
 
 });
