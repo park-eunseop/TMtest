@@ -78,7 +78,7 @@
   <input type="file" name="fileUpload" id="fileUpload" style="display:none;"/>
   <h3>분석할 메뉴를 올려주세요</h3>
   </hr>
-  <div class="menu_list" style="color: #f5f6f7; height: 400px;background-color: black;">
+  <div class="menu_list" style="height: 400px;background-color: white;">
 
 
   </div>
@@ -166,9 +166,10 @@ $('#sendinfo').click(function(){
     }
 
     function reciveMenu(name){
+      console.log('append 할거야')
       $('.menu_list').append(`
-                <div class="col-md-5">
-                    ${name} , name
+                <div class="col-md-5" style="background-color: black;color: white">
+                    ${name}
                 </div>
           `)
 
