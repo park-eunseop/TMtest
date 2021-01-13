@@ -138,7 +138,19 @@ $('#sendinfo').click(function(){
 
 	let model, webcam, labelContainer, maxPredictions;
 	
-	init(); //작동하기
+  init(); //작동하기
+  async function reciveMenu(name){
+      console.log('append 할거야')
+      $('.menu_list').append(`
+                <div class="col-md-5" style="background-color: black;color: white">
+                    ${name}
+                </div>
+          `)
+
+      }
+
+
+
 
     // Load the image model and setup the webcam
     async function init() {
@@ -174,15 +186,7 @@ $('#sendinfo').click(function(){
     }    
 </script>
 <script>
-function reciveMenu(name){
-      console.log('append 할거야')
-      $('.menu_list').append(`
-                <div class="col-md-5" style="background-color: black;color: white">
-                    ${name}
-                </div>
-          `)
 
-      }
 
 </script>
 
