@@ -59,7 +59,13 @@
             }
             predict();
 
-	         });//첨부파일 사진
+           });//첨부파일 사진
+           
+
+
+
+
+           
      
      
     });
@@ -113,15 +119,7 @@ $('#sendinfo').click(function(){
 
 
 });
-function reciveMenu(name){
-      console.log('append 할거야')
-      $('.menu_list').append(`
-                <div class="col-md-5" style="background-color: black;color: white">
-                    ${name}
-                </div>
-          `)
 
-      }
 
 
 </script>
@@ -173,10 +171,19 @@ function reciveMenu(name){
       receiveMenu(name);
 
 
-    }
+    }    
+</script>
+<script>
+function reciveMenu(name){
+      console.log('append 할거야')
+      $('.menu_list').append(`
+                <div class="col-md-5" style="background-color: black;color: white">
+                    ${name}
+                </div>
+          `)
 
-    
-    
+      }
+
 </script>
 
 
