@@ -52,7 +52,8 @@
 		        if(this.files && this.files[0]) {
 			        var reader = new FileReader;
 			        reader.onload = function(data) {
-		 		    $(".dragAndDropDiv").attr("src", data.target.result).width(300).height(300);        
+                    $(".dragAndDropDiv").attr("src", data.target.result).width(300).height(300);
+                    console.log('미리보기 사진 변경!')        
 			        }
 			        reader.readAsDataURL(this.files[0]);
             }
@@ -148,7 +149,8 @@ $('#sendinfo').click(function(){
 					value = prediction[i].probability.toFixed(2);
 					name = prediction[i].className;
 				}
-			}
+      }
+      console.log('분석끝');
       document.getElementById("label-container").value=name;
       console.log(name);
 
