@@ -39,7 +39,9 @@
 </head>
 <body>
 <script>
-     $(document).ready(function(){
+    init(); //작동하기
+
+    $(function(){
             var objDragAndDrop = $(".dragAndDropDiv");
 
             //업로드 이미지 클릭시 파일업로드창
@@ -118,12 +120,11 @@ function reciveMenu(name){
 
 	let model, webcam, labelContainer, maxPredictions;
 	
-  init(); //작동하기
 
 
     // Load the image model and setup the webcam
     async function init() {
-		console.log('작동중!');
+		    console.log('작동중!');
         const modelURL = URL + "model.json";
         const metadataURL = URL + "metadata.json";
         model = await tmImage.load(modelURL, metadataURL);
