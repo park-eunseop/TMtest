@@ -117,18 +117,18 @@
      objDragAndDrop.on('click',function (e){
                     $('#fileUpload').trigger('click');
             });
-            var imgname=$("#fileUpload").files[0].name
-            console.log('file name :',imgname)
+            
+            
             $("#fileUpload").change(function(){
 		        if(this.files && this.files[0]) {
-			        var reader = new FileReader;
+			        var reader = new FileReader();
 			        reader.onload = function(data) {
                     $(".dragAndDropDiv").attr("src", data.target.result).width(300).height(300);
                     console.log('미리보기 사진 변경!')  
-                    imgname= this.files[0].name
-                    console.log('변경후 file name :',imgname)
+                    predict()
 			        }
               reader.readAsDataURL(this.files[0]);
+             
 
               console.log('file name :',this.files[0].name)
              
