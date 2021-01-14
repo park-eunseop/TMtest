@@ -117,7 +117,7 @@
      objDragAndDrop.on('click',function (e){
                     $('#fileUpload').trigger('click');
             });
-            var imgname=$("#fileUpload").get(0).files[0].name
+            var imgname=$("#fileUpload").files[0].name
             console.log('file name :',imgname)
             $("#fileUpload").change(function(){
 		        if(this.files && this.files[0]) {
