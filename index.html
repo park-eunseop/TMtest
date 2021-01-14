@@ -21,14 +21,6 @@
     background-color: #474e5d; 
     color: #ffffff;
   }
-  .bg-3 { 
-    background-color: #ffffff; 
-    color: #555555;
-  }
-  .bg-4 { 
-    background-color: #2f2f2f;
-    color: #fff;
-  }
   .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -52,9 +44,6 @@
 
   </div>
 
-
-
-
 		
 	<input type="text" value="" id="label-container" name="menu" style="color: black;"/>
 
@@ -69,6 +58,7 @@
   const URL = "./my_model/";
 
 	let model, webcam, labelContainer, maxPredictions;
+
 	init(); //작동하기
   $(function(){
             var objDragAndDrop = $(".dragAndDropDiv");
@@ -110,7 +100,7 @@
 
     // Load the image model and setup the webcam
     async function init() {
-		    console.log('작동중!');
+		    console.log('작동!');
         const modelURL = URL + "model.json";
         const metadataURL = URL + "metadata.json";
         model = await tmImage.load(modelURL, metadataURL);
