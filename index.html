@@ -86,7 +86,8 @@
       console.log(image)
 			const prediction = await model.predict(image,false);
 
-			
+      console.log(prediction)
+
       var name = prediction[1].className;
       var value = prediction[1].probability.toFixed(2);
       console.log(name)
