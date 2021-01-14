@@ -102,7 +102,7 @@
     const URL = "./my_model/";
 
 	let model, webcam, labelContainer, maxPredictions;
-	
+	var foods ="";
 	init(); //작동하기
 
     // Load the image model and setup the webcam
@@ -132,8 +132,9 @@
 					value = prediction[i].probability.toFixed(2);
 					name = prediction[i].className;
 				}
-			}
-      document.getElementById("label-container").value=name;
+      }
+      foods+="/"+name;
+      document.getElementById("label-container").value=foods;
       
       function reciveMenu(name){  
         console.log('append 할거야')
