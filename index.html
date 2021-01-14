@@ -82,7 +82,8 @@
 
     async function predict() {
 			// predict can take in an image, video or canvas html element
-			var image = document.getElementById("face-image");
+      var image = document.getElementById("face-image");
+      console.log(image)
 			const prediction = await model.predict(image,false);
 
 			
@@ -105,6 +106,8 @@
 
 			
 			for (let i = 1; i < maxPredictions; i++) {
+        
+
 				if(value < prediction[i].probability.toFixed(2)){
 					value = prediction[i].probability.toFixed(2);
 					name = prediction[i].className;
