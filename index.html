@@ -71,8 +71,18 @@
             var objDragAndDrop = $(".dragAndDropDiv");
             
 
-            //업로드 이미지 클릭시 파일업로드창
-            objDragAndDrop.on('click',function (e){
+            
+
+    // Load the image model and setup the webcam
+    async function init() {
+		    console.log('작동!');
+        const modelURL = URL + "model.json";
+        const metadataURL = URL + "metadata.json";
+        model = await tmImage.load(modelURL, metadataURL);
+        maxPredictions = model.getTotalClasses();
+
+        //업로드 이미지 클릭시 파일업로드창
+        objDragAndDrop.on('click',function (e){
                     $('#fileUpload').trigger('click');
             });
 
@@ -105,15 +115,7 @@
 		            });
 
             });
-}); 
 
-    // Load the image model and setup the webcam
-    async function init() {
-		    console.log('작동!');
-        const modelURL = URL + "model.json";
-        const metadataURL = URL + "metadata.json";
-        model = await tmImage.load(modelURL, metadataURL);
-        maxPredictions = model.getTotalClasses();
 
     }
 
@@ -141,7 +143,7 @@
     } 
     
     
-
+  }); 
 </script>
 
 
