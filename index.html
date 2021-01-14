@@ -72,6 +72,8 @@
         const modelURL = URL + "model.json";
         const metadataURL = URL + "metadata.json";
         model = await tmImage.load(modelURL, metadataURL);
+        console.log('model:',model)
+
         maxPredictions = model.getTotalClasses();
 
         console.log('maxPredictions:',maxPredictions)
