@@ -59,7 +59,7 @@
       //정보 보내기
       $('#sendinfo').click(function(){
                var data = document.getElementById("label-container").value;
-              $('.menu_list').remove();
+              $('.menu_list *').remove();
 
                //alert(data);
                $.ajax({
