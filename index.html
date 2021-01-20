@@ -59,7 +59,9 @@
       //정보 보내기
       $('#sendinfo').click(function(){
                var data = document.getElementById("label-container").value;
-               alert(data);
+              $('.menu_list').remove();
+
+               //alert(data);
                $.ajax({
                   url: "http://localhost:8080/veve/Member/MemberDietpost.do",
 		          		data : "data="+data,
@@ -88,6 +90,7 @@
   <input type="file" name="fileUpload" id="fileUpload" style="display:none;"/>
   <h5>분석할 메뉴를 올려주세요</h5>
   <button  id="sendinfo"  class="btn btn-large btn-success"  type="button">분석하기</button>
+  <button class="btn btn-large btn-success add" onclick="predict()" type="button">Add</button>
   <!--
   <input id="sendinfo" type="button" value="분석하기" style="color: black;" >
   -->
@@ -95,7 +98,7 @@
   </br>
   <div style="padding-bottom: 10px;"></div>
   <div class="menu_list" style="height: 200px;background-color: white; padding-top: 10px;">
-    <button class="btn btn-large btn-success add" onclick="predict()" type="button">Add</button>
+    
     
  
   
@@ -103,7 +106,7 @@
   </div>
 
 		
-	<input type="text" value="" id="label-container" name="menu" style="color: black;"/>
+	<input type="text" value="" id="label-container" name="menu" style="color: black;" hidden/>
 
   
   
