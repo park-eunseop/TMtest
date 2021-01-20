@@ -61,16 +61,8 @@
                var data = document.getElementById("label-container").value;
               $('.menu_list *').remove();
 
-               //alert(data);
-               $.ajax({
-                  url: "http://localhost:8080/veve/Member/MemberDietpost.do",
-		          		data : "data="+data,
-			          	type : 'post',
-		            	dataType: 'text',
-			          	success : function(data) {  
-                      console.log(data);
-                     }
-		            });
+              $('#foodinfo').attr('href','http://localhost:8080/veve/Member/MemberDietpost.do?data='+data);
+              $('#foodinfo').get(0).click();             
 
             });
      
@@ -107,7 +99,7 @@
 
 		
 	<input type="text" value="" id="label-container" name="menu" style="color: black;" hidden/>
-
+  <a href="#" hidden id="foodinfo"></a>
   
   
   </form>
